@@ -396,29 +396,29 @@
       <p class="footer__title">ПРИЄДНУЙТЕСЬ</p>
       <ul class="social__list footer__social">
         <li class="social__item footer__social__item">
-          <a class="social__link" href="#" target="_blank" aria-label="instagram">
-            <svg class="social__icon" width="20" height="20">
+          <a class="social__link__footer" href="#" target="_blank" aria-label="instagram">
+            <svg class="social__icon__footer" width="20" height="20">
               <use href="./images/symbol-defs.svg#icon-instagrammin"></use>
             </svg>
           </a>
         </li>
         <li class="social__item footer__social__item">
-          <a class="social__link" href="#" target="_blank" aria-label="twitter">
-            <svg class="social__icon" width="20" height="20">
+          <a class="social__link__footer" href="#" target="_blank" aria-label="twitter">
+            <svg class="social__icon__footer" width="20" height="20">
               <use href="./images/symbol-defs.svg#icon-twittermin"></use>
             </svg>
           </a>
         </li>
         <li class="social__item footer__social__item">
-          <a class="social__link" href="#" target="_blank" aria-label="facebook">
-            <svg class="social__icon" width="20" height="20">
+          <a class="social__link__footer" href="#" target="_blank" aria-label="facebook">
+            <svg class="social__icon__footer" width="20" height="20">
               <use href="./images/symbol-defs.svg#icon-facebookmin"></use>
             </svg>
           </a>
         </li>
         <li class="social__item footer__social__item">
-          <a class="social__link" href="#" target="_blank" aria-label="linkedin">
-            <svg class="social__icon" width="20" height="20">
+          <a class="social__link__footer" href="#" target="_blank" aria-label="linkedin">
+            <svg class="social__iconfooter__" width="20" height="20">
               <use href="./images/symbol-defs.svg#icon-linkedinmin"></use>
             </svg>
           </a>
@@ -432,15 +432,19 @@
     
     
     </footer>
-  
-   <div class="backdrop">
+
+  <button data-modal-open>open</button>
+
+   <div class="backdrop is-hidden" data-modal>
     <div class="modal">
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, ea. Asperiores itaque, molestiae animi dicta eveniet aut! Recusandae earum voluptatum numquam optio eius voluptate nulla magni iusto laudantium, fuga adipisci.
         
       </p>
-      <button>close</button>
+      <button data-modal-close>close</button>
     </div>
 
    </div>
+   <script src="./js/modal.js"></script>
+</body>
 </body>
 </html>
