@@ -101,24 +101,16 @@ summary,
 time,
 mark,
 audio,
-video {
-  margin: 0px;
-  margin: 0px;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
+video,
 
 html {
+
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
   font: inherit;
-  font-weight: normal;
+  
   vertical-align: baseline;
 }
 
@@ -140,7 +132,8 @@ img {
   --body-text-color: rgba(33, 150, 243, 1);
   --primery-text-color: rgba(33, 33, 33, 1);
   --primery-text-color-gray:  rgba(117, 117, 117, 1);
-  
+  --transition-duration: var(250ms);
+  --transition-timing-function: var(cubic-bezier(0.4, 0, 0.2, 1));
 }
 
 /* второй цвет фона и футера #2F303A */
@@ -149,12 +142,13 @@ img {
 /* body text color #000000*/
 /* вторичный цвет текста background: rgba(33, 33, 33, 1);
 */
+
 body {
   font-family: "Roboto", sans-serif;
-  font-size: 14px;
+  font-size: 100%;
   font-style: normal;
-  background-color: var(--primery-fon-color);
   font-weight: 400;
+  line-height: 1.17;
 }
 .conteiner {
   max-width: 1200px;
@@ -317,13 +311,14 @@ ul {
 .header__link__mail:hover,
 .header__link__mail:focus {
   color: var(--body-text-color);
+  
 }
 .header__link__tel:hover,
 .header__link__tel:focus {
   color: var(--body-text-color);
 }
 .tech__link {
-  fill: var(--primery-text-color-gray);
+  fill: currentColor;
 }
 .tech__link:hover,
 .tech__link:focus {
@@ -384,38 +379,34 @@ ul {
 }
 
 .button__prime {
+  display: flex;
+  align-items: center;
+
   /* size button */
-  width: 216px;
+  min-width: 216px;
   height: 50px;
   border-radius: 4px;
+  border: transparent;
 
   /* color shadow batton*/
   background: rgba(33, 150, 243, 1);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
-  /* text button */
-  display: flex;
-
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 10px 32px;
-  text-align: center;
-
-  border: transparent;
-
-  /* color button */
-
-  text-decoration: none;
-
   /* position text button */
+   margin-top: 0;
+   margin-bottom: 0;
+   padding: 10px 32px;
+   text-align: center;
 
-  /* text button */
-
+   /* text button */
+  font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  text-align: center;
-  letter-spacing: 6%;
+  
+  letter-spacing: 0.06em;
+  text-decoration: none;
   color: #ffffff;
+ 
 }
 /* Особливості */
 .box-works {
@@ -464,16 +455,16 @@ ul {
     font-weight: 700;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 1);
-    ;
+    
     align-items: center;
     
-    position: relative;
+    position: absolute;
     
     
-    transform: translate(0, 100%);
+    transform: translate(0, 223px);
     
     background: rgba(47, 48, 58, 0.8);
-    opacity: 0.5;
+    opacity: 0.95;
     z-index: 1;
     
    
@@ -483,7 +474,7 @@ ul {
 
 .section-title {
   font-weight: bold;
-  line-height: 1.14;
+  line-height: 1.17;
   font-size: 14px;
   margin-bottom: 10px;
 }
@@ -494,10 +485,19 @@ ul {
 }
 
 .section-task {
-  font-style: normal;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 1.71;
+/* or 171% */
 
-  color: #757575;
-}
+letter-spacing: 0.03em;
+
+color: #757575;
+
+  }
+
 .section.works {
   padding-top: 0;
 }
@@ -628,15 +628,13 @@ ul {
   margin-bottom: 50px;
 }
 
-.clients {
-  
-}
 
 .clients__size {
   display: flex;
   justify-content: center;
   gap: 30px;
 }
+
 
 .client__cards {
   display: flex;
@@ -733,8 +731,7 @@ ul {
 }
 
 .mail-footer {
-  font-style: normal;
-  font-weight: 400;
+  
   font-size: 14px;
   line-height: 1.71;
   /* or 171% */
@@ -747,7 +744,7 @@ ul {
 }
 
 .tel-footer {
-  font-style: normal;
+  
 
   font-size: 14px;
   line-height: 1.71;
@@ -775,8 +772,16 @@ ul {
 }
 
 .footer__title {
-  color: rgba(255, 255, 255, 1);
+  
   margin-bottom: 20px;
+  
+  
+  font-weight: 700;
+  font-size: 14px;
+  
+  letter-spacing: 0.03em;
+  
+color: var(--primery-fon-color);
 
 }
 .social__link__footer { 
@@ -810,6 +815,45 @@ ul {
 .conteiner-wrap {
   display: flex;
   align-items: baseline;
+}
+/* backdrop */
+
+.backdrop {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+
+  width: 500px;
+  height: 200px;
+
+  background-color: tomato;
+
+}
+.data-modal-open {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+.backdrop.is-hidden {
+  opacity: 0.5;
+  pointer-events: none;
+
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+ 
+  max-width: 400px;
+  max-height: 150px;
+
+  padding: auto;
+
+
+  background-color: #2196f3;
+  
+ 
 }
 
 /* portfolio */
@@ -913,6 +957,9 @@ ul.section__title {
   
 }
 
+  
+
+  
 .section__title__card:hover {
   
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
