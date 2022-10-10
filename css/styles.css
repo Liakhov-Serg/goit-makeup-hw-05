@@ -913,8 +913,9 @@ color: var(--primery-fon-color);
 }
 .button-portfolio:hover {
   
-  border: 2px solid rgba(33, 150, 243, 1);
+  background-color: rgba(33, 150, 243, 1);
   border-radius: 4px;
+  color: var(--primery-fon-color);
 }
 /* button-portfolio-all */
 .button-portfolio {
@@ -960,7 +961,7 @@ background: rgba(33, 150, 243, 1);
 }
 .blue:hover,
 .blue:focus {
-  border: 1px solid rgba(33, 150, 243, 1);
+  
   border-radius: 4px;
   color: #ffffff;
 }
