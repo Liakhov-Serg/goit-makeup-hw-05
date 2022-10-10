@@ -1032,7 +1032,8 @@ color: var(--primery-fon-color);
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
 }
-.button-portfolio:hover {
+.button-portfolio:hover, 
+.button-portfolio:focus {
   
   background-color: rgba(33, 150, 243, 1);
   border-radius: 4px;
@@ -1051,11 +1052,8 @@ background: rgba(33, 150, 243, 1);
 
   border-radius: 4px;
 
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 26px;
+  
+  
   /* identical to box height, or 162% */
 
   text-align: center;
@@ -1070,6 +1068,7 @@ background: rgba(33, 150, 243, 1);
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
 }
+
 .blue:hover,
 .blue:focus {
   
