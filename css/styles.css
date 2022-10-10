@@ -132,8 +132,8 @@ img {
   --body-text-color: rgba(33, 150, 243, 1);
   --primery-text-color: rgba(33, 33, 33, 1);
   --primery-text-color-gray:  rgba(117, 117, 117, 1);
-  --transition-duration: var(250ms);
-  --transition-timing-function: var(cubic-bezier(0.4, 0, 0.2, 1));
+  --transition-duration: 250ms;
+  --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* второй цвет фона и футера #2F303A */
@@ -145,7 +145,7 @@ img {
 
 body {
   font-family: "Roboto", sans-serif;
-  font-size: 100%;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.17;
@@ -184,6 +184,7 @@ ul {
 /* logotype */
 .logo:hover {
   color: var(--body-text-color);
+  
 }
 .logo {
   font-family: "Raleway";
@@ -196,9 +197,13 @@ ul {
   margin: 0;
   padding-top: 0px;
   padding-bottom: 0px;
+
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 .accent:hover {
   color: rgba(33, 150, 243, 1);
+  
 }
 .accent {
   font-family: "Raleway";
@@ -206,7 +211,11 @@ ul {
   font-weight: bold;
   color: rgb(0, 0, 1);
   margin-right: 93px;
+
+  transition-duration:var(--transition-duration) 
+  transition-timing-function:var(--transition-timing-function);
 }
+
 .carrent {
   color: #2196f3;
 }
@@ -214,15 +223,21 @@ ul {
 .header .link.carrent.studio:hover,
 .header .link.carrent.studio:focus {
   color: var(--body-text-color);
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 
 .header .link:hover,
 .header .link:focus {
   color: rgba(33, 150, 243, 1);
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 .link-mail {
   text-decoration: none;
   color: var(--body-text-color);
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 
 /* site-nav */
@@ -235,7 +250,10 @@ ul {
 .link {
   text-decoration: none;
   color: #000;
+
+
 }
+
 
 .site-nav .link.studio {
   color: rgba(33, 150, 243, 1);
@@ -248,17 +266,24 @@ ul {
   display: block;
   width: 100%;
   height: 4px;
-  background-color: red;
+  border-radius: 2px;
+  background-color: var(--body-text-color);
   position: absolute;
   bottom: -2px;
 }
 
 .site-nav.list {
   display: flex;
-  font-weight: medium;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  font-weight: 500;
+
+font-family: 'Roboto';
+font-style: normal;
+font-size: 14px;
+line-height: 1.14;
+letter-spacing: 0.02em;
+font-weight: 500;
+
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 
 .site-nav .list:not(first-child) {
@@ -274,7 +299,8 @@ ul {
 }
 
 .studio .link {
-  color: #2196f3;
+ 
+color: #2196F3;
 }
 
 .portfolio {
@@ -285,11 +311,15 @@ ul {
 .auth-nav.list {
   display: flex;
   margin-left: auto;
+  align-content: center;
   font-weight: 500;
   font-size: 100%;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primery-text-color-gray);
+
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 
 
 
@@ -297,6 +327,9 @@ ul {
 .auth-nav .mail {
   margin-right: 0px;
   margin-left: 0px;
+
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 .a.link {
   padding-top: 30px;
@@ -305,6 +338,8 @@ ul {
 .auth-nav .tel {
   margin-right: 0px;
   margin-left: 50px;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 
 .header__link__mail,.header__link__tel {
@@ -316,6 +351,8 @@ ul {
   gap: 10px;
   color:var(--primery-text-color-gray);
   text-decoration: none;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
  
 .item .auth-nav {
@@ -333,18 +370,27 @@ ul {
 .header__link__mail:hover,
 .header__link__mail:focus {
   color: var(--body-text-color);
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
   
 }
 .header__link__tel:hover,
 .header__link__tel:focus {
   color: var(--body-text-color);
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+
 }
 .tech__link {
   fill: currentColor;
+
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 .tech__link:hover,
 .tech__link:focus {
  fill: var(--body-text-color);
+ 
 }
 
 
@@ -560,6 +606,9 @@ color: #757575;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 
   border-radius: 0px 0px 4px 4px;
+
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 
 .section-namelist {
@@ -612,18 +661,24 @@ color: #757575;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 
 .social__link:hover,
 .social__link:focus {
   background-color: #2196f3;
+  
 }
 .social__link:hover .social__icon {
   fill: #ffffff;
+  
 }
 
 .social__link:focus .social__icon {
   fill: #ffffff;
+  
 }
 .social__icon {
   display: flex;
@@ -637,6 +692,9 @@ color: #757575;
 
   color: rgb(26, 178, 195);
   fill: rgba(175, 177, 184, 1);
+
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 /*--наші клієнти--*/
 
@@ -667,6 +725,9 @@ color: #757575;
   height: 92px;
   /* border: 1px solid #afb1b8; */
   border-radius: 4px;
+
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 .client__item {
   display: flex;
@@ -676,24 +737,34 @@ color: #757575;
   justify-content: center;
     border: 1px solid #afb1b8;
 
+    transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+
 }
 
 .client__item:hover,
 .client__item:focus {
   border-color:  rgba(33, 150, 243, 1);
+  
 }
 .client__item:hover .client__label,
 .client__item:focus .client__label {
 color: #2196f3;
 fill: currentColor;
+
 }
 
 .client__label {
   fill: rgba(175, 177, 184, 1);
+
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 .client__cards:hover .client__label,
 .client__cards:focus .client__label {
   fill: rgba(33, 150, 243, 1);
+  
+
 }
 
 
@@ -728,6 +799,9 @@ fill: currentColor;
   text-align: left;
   text-decoration: none;
   color: rgba(33, 150, 243, 1);
+
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 
 .accent-footer {
@@ -738,11 +812,15 @@ fill: currentColor;
   letter-spacing: 0.03em;
   text-align: left;
   color: rgba(255, 255, 255, 1);
+
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 
 .map:focus,
 .map:hover {
   color: rgba(33, 150, 243, 1);
+  
 }
 
 .map {
@@ -758,6 +836,9 @@ fill: currentColor;
 
   display: inline-block;
   margin-top: 20px;
+
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 
 .mail-footer {
@@ -786,10 +867,14 @@ fill: currentColor;
 
   display: inline-block;
   margin-top: 9px;
+
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 .tel-footer:focus,
 .tel-footer:hover {
   color: rgba(33, 150, 243, 1);
+  
 }
 
 .footer__join {
@@ -829,17 +914,25 @@ color: var(--primery-fon-color);
   
   background-position: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 .social__icon__footer {
   fill:#ffffff
+
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 
 .social__link__footer:hover,
 .social__link__footer:focus {
   background-color: var(--body-text-color);
+  
 }
 .social__item__footer:hover .social__icon {
   fill: var(--primery-fon-color);
+  
 }
 
 .conteiner-wrap {
@@ -916,6 +1009,7 @@ color: var(--primery-fon-color);
   background-color: rgba(33, 150, 243, 1);
   border-radius: 4px;
   color: var(--primery-fon-color);
+  
 }
 /* button-portfolio-all */
 .button-portfolio {
@@ -932,6 +1026,9 @@ color: var(--primery-fon-color);
   font-size: 16px;
 
   cursor: pointer;
+
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 
 .blue {
@@ -958,12 +1055,16 @@ background: rgba(33, 150, 243, 1);
   /* identical to box height, or 162% */
 
   cursor: pointer;
+
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 .blue:hover,
 .blue:focus {
   
   border-radius: 4px;
   color: #ffffff;
+  
 }
 
 /* block cards*/
@@ -992,6 +1093,9 @@ ul.section__title {
     0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
     cursor: pointer;
+
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 
 .section__title__card__bord {
@@ -1013,6 +1117,9 @@ ul.section__title {
   letter-spacing: 0.06em;
   margin-top: 0px;
   padding-bottom: 4px;
+
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 
 .section__task__portfolio {
@@ -1025,6 +1132,9 @@ ul.section__title {
   margin-top: 0;
 
   color: #757575;
+
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 .place__portfolio {
   margin-bottom: 94px;
