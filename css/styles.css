@@ -1097,11 +1097,17 @@ ul.section__title {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 
 .section__title__card {
   /* background-color: yellow; */
   flex-basis: calc((100% - 30px * 2) / 3);
+  
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
   
 }
 
@@ -1114,16 +1120,20 @@ ul.section__title {
     1px 4px 6px rgba(0, 0, 0, 0.16);
     cursor: pointer;
 
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--transition-timing-function);
+  
 }
 .section__title__card:hover .text__overlay {
   transform: translateY(0);
+
+  
 }
 
 .image__overlay {
   position: relative;
   overflow: hidden;
+
+  
+
 }
 .text__overlay {
   position: absolute;
@@ -1136,6 +1146,17 @@ ul.section__title {
   bottom: 0;
   background-color: var(--body-text-color);
   padding: 63px 24px;
+  font-size: 18px;
+  line-height: 28px;
+/* or 156% */
+
+letter-spacing: 0.03em;
+
+color: #FFFFFF;
+
+transition-duration: var(--transition-duration);
+transition-timing-function: var(--transition-timing-function);
+
 } 
 
 
@@ -1152,6 +1173,7 @@ ul.section__title {
 
 .section__title__portfolio {
   font-weight: bold;
+  font-size: 18px;
   
   line-height: 2;
   /* identical to box height, or 200% */
