@@ -66,7 +66,9 @@
         <h1 class="hero-title">ЕФЕКТИВНІ РІШЕННЯ ДЛЯ ВАШОГО БІЗНЕСУ</h1>
         <!--Питання!!!-->
         <div class="hero-batton">
-        <button type="button" class="button__prime" data-modal-open>Замовити послугу</button>
+        <button type="button" class="button__prime"
+          data-modal-open
+          >Замовити послугу</button>
         </div>
       </div>
         
@@ -438,10 +440,12 @@
 
    <div class="backdrop is-hidden" data-modal>
     <div class="modal">
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, ea. Asperiores itaque, molestiae animi dicta eveniet aut! Recusandae earum voluptatum numquam optio eius voluptate nulla magni iusto laudantium, fuga adipisci.
-        
-      </p>
-      <button data-modal-close>close</button>
+      
+      <button class="modal__close" data-modal-close>
+        <svg class="close__icon" width="11" height="11">
+          <use href="./images/symbol-defs.svg#icon-hresticmin"></use>
+        </svg>
+      </button>
     </div>
 
    </div>
