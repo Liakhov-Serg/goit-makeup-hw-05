@@ -307,6 +307,7 @@ color: #2196F3;
   display: flex;
   margin-left: auto;
   align-content: center;
+  align-items: center;
   font-weight: 500;
   font-size: 100%;
   line-height: 1.14;
@@ -969,7 +970,7 @@ color: var(--primery-fon-color);
 .modal {
   position: absolute;
   min-width: 528px;
-  height: 250px;
+  height: 581px;
 
   top: 50%;
   left: 50%;
@@ -1119,6 +1120,11 @@ ul.section__title {
   transition-timing-function: var(--transition-timing-function);
   
 }
+.portfolio__link {
+  text-decoration: none;
+  color: rgba(33, 33, 33, 1);
+  ;
+}
 
   
 
@@ -1135,6 +1141,11 @@ ul.section__title {
 .section__title__card:hover .text__overlay {
   transform: translateY(0);
 
+  
+}
+.portfolio__link:focus .text__overlay {
+  transform: translateY(0);
+ 
   
 }
 
